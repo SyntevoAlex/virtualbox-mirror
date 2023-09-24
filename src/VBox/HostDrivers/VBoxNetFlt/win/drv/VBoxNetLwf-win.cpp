@@ -306,7 +306,7 @@ static void vboxNetLwfLogErrorEvent(NTSTATUS uErrCode, NTSTATUS uReturnedStatus,
     }
 }
 
-#ifdef DEBUG
+#if defined(DEBUG) || defined(LOG_ENABLED)
 
 static const char *vboxNetLwfWinStatusToText(NDIS_STATUS code)
 {
